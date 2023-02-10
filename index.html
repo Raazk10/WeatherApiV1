@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WeatherAppV1</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+	<div class="grid-container">
+		<header class="header">
+			<div class="header__logo">
+				<h1 class="header__logo-text">LOGO</h1>
+			</div>
+			<div class="header__search">
+				<form class="header__search-form">
+					<input class="header__search-input" type="text" placeholder="Search..." aria-label="Search input">
+					<button class="header__search-button" type="submit" aria-label="Submit search">Go</button>
+				</form>
+			</div>
+		</header>
+		<aside class="aside">
+			<div class="aside__recent-searches">
+				<h2 class="aside__recent-searches-title">Recent Searches</h2>
+				<ul class="aside__recent-searches-list">
+
+				</ul>
+			</div>
+		</aside>
+		<main class="main">
+			<div class="main__card main__card--visible">
+				<h1 class="main__card-title--city"></h1>
+				<p class=" main__card-text main__card-text--weatherdescription"></p>
+				<figure class="main__icon">
+
+				</figure>
+				<p class=" main__card-text main__card-text--temperature"></p>
+				<p class=" main__card-text main__card-text--windspeed"></p>
+				<p class=" main__card-text main__card-text--localtime"></p>
+			</div>
+		</main>
+		<footer class="footer">
+			<p class="footer__copyright">Copyright &copy; 2023 Weather App</p>
+		</footer>
+	</div>
+
+</body>
+
+</html>
