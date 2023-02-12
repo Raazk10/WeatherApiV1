@@ -1,5 +1,6 @@
 import fetchApi from "./fetchApi.js";
 import displayWeather from "./displayWeather.js";
+//import forecastWeather from "./forecastWeather.js";
 
 export default function getWeatherData() {
   const submitButton = document.querySelector(".header__search-form");
@@ -12,5 +13,7 @@ export default function getWeatherData() {
 
     displayWeather(data);
     searchInput.value = "";
+    //forecast weather
+    // forecastWeather(data);
   });
 }
