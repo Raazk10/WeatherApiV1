@@ -1,6 +1,6 @@
 export default async function fetchApi(city) {
   const apikey = `9f0b6e2d3cb14df2a5e202815230902`;
-  const url = `http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}&aqi=no`;
+  const url = `http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=5&aqi=no&alerts=no`;
 
   try {
     const response = await fetch(url);
