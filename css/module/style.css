@@ -1,11 +1,11 @@
 .grid-container {
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas:
-		"header header"
-		"aside main"
-		"footer footer";
+		"header header header"
+		"aside main forecast "
+		"footer footer footer";
 	height: 100vh;
 }
 
@@ -29,13 +29,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: lightgray;
+	background-color: rgb(50, 46, 46);
+	padding: 0.8rem;
+}
+
+.forecast {
+	grid-area: forecast;
+	background-color: rgb(7, 2, 2);
 	padding: 1rem;
+	color: #f5f5f5;
+	font-size: 1.6rem;
+
 }
 
 .footer {
 	grid-area: footer;
-	background-color: #f5f5f5;
+	background-color: rgb(19, 19, 19);
+	color: #f5f5f5;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -91,6 +101,7 @@
 	font-weight: bold;
 	color: #f5f5f5;
 	margin: 0 0 1rem 0;
+	border-bottom: 2px solid white;
 }
 
 .aside__recent-searches-list {
@@ -135,18 +146,72 @@
 
 
 
-.main__card-title {
+.main__card-title--city {
 	font-size: 2rem;
 	font-weight: bold;
-	margin: 0;
+	margin: 10px;
+	border-bottom: 2px solid black;
+
 }
 
 .main__card-text {
 	font-size: 1.2rem;
 	margin: 0.5rem 0;
 
+
 }
 
-.main__icon {
-	margin: 1rem 0
+.main__icon {}
+
+
+/* Forecast */
+
+.main__forecast {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+
+}
+
+.main__forecast-title {
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-bottom: 2px solid black;
+}
+
+.main__forecast-list {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.week {
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-bottom: 1px solid royalblue;
+}
+
+.icon__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.icon__container-temperature {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.temperature {
+	font-size: 1rem;
+
 }
