@@ -5,7 +5,7 @@ import displayWeather from "./displayWeather.js";
 export default function getWeatherData() {
   const submitButton = document.querySelector(".header__search-form");
   const searchInput = document.querySelector(".header__search-input");
-  submitButton.addEventListener("submit", async (e) => {
+  submitButton.addEventListener("click", async (e) => {  // gå til andre side
     e.preventDefault();
 
     const city = searchInput.value;
